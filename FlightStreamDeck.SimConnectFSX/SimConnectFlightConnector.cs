@@ -35,6 +35,7 @@ namespace FlightStreamDeck.SimConnectFSX
         private readonly ILogger<SimConnectFlightConnector> logger;
 
         public IntPtr Handle { get; private set; }
+        public bool Connected { get; private set; }
 
         private SimConnect simconnect = null;
         private CancellationTokenSource cts = null;
@@ -291,6 +292,8 @@ namespace FlightStreamDeck.SimConnectFSX
 
         public void CloseConnection()
         {
+	        Connected = false;
+
             try
             {
                 logger.LogDebug("Trying to cancel request loop");
@@ -752,6 +755,7 @@ namespace FlightStreamDeck.SimConnectFSX
         void Simconnect_OnRecvOpen(SimConnect sender, SIMCONNECT_RECV_OPEN data)
         {
             logger.LogInformation("Connected to Flight Simulator");
+            Connected = true;
 
             cts?.Cancel();
             cts = new CancellationTokenSource();
@@ -767,7 +771,7 @@ namespace FlightStreamDeck.SimConnectFSX
                         {
                             cts?.Token.ThrowIfCancellationRequested();
                             simconnect?.RequestDataOnSimObjectType(DATA_REQUESTS.AIRCRAFT_DATA, DEFINITIONS.AircraftData, 0, SIMCONNECT_SIMOBJECT_TYPE.USER);
-                            simconnect?.RequestDataOnSimObjectType(DATA_REQUESTS.FLIGHT_STATUS, DEFINITIONS.FlightStatus, 0, SIMCONNECT_SIMOBJECT_TYPE.USER);
+                            //simconnect?.RequestDataOnSimObjectType(DATA_REQUESTS.FLIGHT_STATUS, DEFINITIONS.FlightStatus, 0, SIMCONNECT_SIMOBJECT_TYPE.USER);
 
                             if (genericValues.Count > 0 && isGenericValueRegistered)
                             {
