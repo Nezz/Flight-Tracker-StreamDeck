@@ -129,6 +129,10 @@ namespace FlightStreamDeck.SimConnectFSX
             simconnect.MapClientEventToSimEvent(EVENTS.AP_AIRSPEED_INC, "AP_SPD_VAR_INC");
             simconnect.MapClientEventToSimEvent(EVENTS.AP_AIRSPEED_DEC, "AP_SPD_VAR_DEC");
 
+            simconnect.MapClientEventToSimEvent(EVENTS.AP_MACH_SET, "AP_MACH_VAR_SET");
+			simconnect.MapClientEventToSimEvent(EVENTS.AP_MACH_INC, "AP_MACH_VAR_INC");
+            simconnect.MapClientEventToSimEvent(EVENTS.AP_MACH_DEC, "AP_MACH_VAR_DEC");
+
             simconnect.MapClientEventToSimEvent(EVENTS.QNH_SET, "KOHLSMAN_SET");
             simconnect.MapClientEventToSimEvent(EVENTS.QNH_INC, "KOHLSMAN_INC");
             simconnect.MapClientEventToSimEvent(EVENTS.QNH_DEC, "KOHLSMAN_DEC");
@@ -243,6 +247,21 @@ namespace FlightStreamDeck.SimConnectFSX
         public void ApAirSpeedDec()
         {
             SendCommand(EVENTS.AP_AIRSPEED_DEC);
+        }
+
+        public void ApMachSet(uint speed)
+        {
+	        SendCommand(EVENTS.AP_MACH_SET, speed);
+        }
+
+        public void ApMachInc()
+        {
+	        SendCommand(EVENTS.AP_MACH_INC);
+        }
+
+        public void ApMachDec()
+        {
+	        SendCommand(EVENTS.AP_MACH_DEC);
         }
 
         public void QNHSet(uint qnh)
