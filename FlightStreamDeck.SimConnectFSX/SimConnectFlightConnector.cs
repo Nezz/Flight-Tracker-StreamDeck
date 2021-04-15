@@ -139,6 +139,8 @@ namespace FlightStreamDeck.SimConnectFSX
 
             simconnect.MapClientEventToSimEvent(EVENTS.AVIONICS_TOGGLE, "AVIONICS_MASTER_SET");
 
+            simconnect.MapClientEventToSimEvent(EVENTS.COM_STBY_RADIO_SET, "COM_STBY_RADIO_SET");
+
             isGenericValueRegistered = false;
             RegisterGenericValues();
             RegisterGenericEvents();
@@ -283,6 +285,10 @@ namespace FlightStreamDeck.SimConnectFSX
         public void AvMasterToggle(uint state)
         {
             SendCommand(EVENTS.AVIONICS_TOGGLE, state);
+        }
+        public void Com1StandbySet(uint state)
+        {
+	        SendCommand(EVENTS.COM_STBY_RADIO_SET, state);
         }
 
         private void SendCommand(EVENTS sendingEvent, uint data = 0)

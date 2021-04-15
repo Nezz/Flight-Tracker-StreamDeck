@@ -60,6 +60,7 @@ namespace FlightStreamDeck.SimConnectFSX
         QNH_INC,
         QNH_DEC,
         AVIONICS_TOGGLE,
+        COM_STBY_RADIO_SET
     }
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 1)]
