@@ -583,6 +583,8 @@
         LANDING_LIGHT_HOME,
         STROBES_ON,
         STROBES_OFF,
+        CABIN_LIGHTS_ON,
+        CABIN_LIGHTS_OFF,
         PANEL_LIGHTS_ON,
         PANEL_LIGHTS_OFF,
         LANDING_LIGHTS_ON,
