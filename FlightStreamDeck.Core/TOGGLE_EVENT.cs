@@ -1141,10 +1141,22 @@
         MOBIFLIGHT_CJ4_FMC_1_BTN_DIV,
         MOBIFLIGHT_WT_CJ4_AP_SPEED_PRESSED,
         MOBIFLIGHT_PANEL_LIGHTS_POWER_SETTING_SET,
+        MOBIFLIGHT_MAP_LIGHTS_POWER_SETTING_SET,
         MOBIFLIGHT_FLOOD_LIGHTS_POWER_SETTING_SET,
         MOBIFLIGHT_DISPLAY_LIGHTS_POWER_SETTING_SET,
         MOBIFLIGHT_TBM930_MASTER_CAUTION_PUSH,
         MOBIFLIGHT_TBM930_MASTER_WARNING_PUSH,
+        MOBIFLIGHT_AS3000_TSC_Vertical_SpeedBugs_1_Off,
+        MOBIFLIGHT_AS3000_TSC_Vertical_SpeedBugs_1_On,
+        MOBIFLIGHT_AS3000_TSC_Vertical_SpeedBugs_2_Off,
+        MOBIFLIGHT_AS3000_TSC_Vertical_SpeedBugs_2_On,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Half,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Full,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Map,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Traffic,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Weather,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Charts,
+        MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Inset,
     }
 
     public static class EventExtensions
