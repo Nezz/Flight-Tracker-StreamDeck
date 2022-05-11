@@ -1159,6 +1159,7 @@
         MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Weather,
         MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Charts,
         MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Inset,
+        ROTOR_BRAKE,
     }
 
     public static class EventExtensions
