@@ -20,7 +20,7 @@
     <Compile Include="..\FlightStreamDeck.Logics\IFlightConnector.cs" Link="IFlightConnector.cs" />
     <Compile Include="..\FlightStreamDeck.SimConnectFSX\SimConnectFlightConnector.cs" Link="SimConnectFlightConnector.cs" />
     <Compile Include="..\FlightStreamDeck.SimConnectFSX\Structs.cs" Link="Structs.cs" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.0" />
 
     <Reference Include="Microsoft.FlightSimulator.SimConnect">
       <HintPath>$(MSFS_SDK)\SimConnect SDK\lib\managed\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
