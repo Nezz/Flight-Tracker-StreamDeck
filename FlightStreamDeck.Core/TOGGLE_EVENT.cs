@@ -1160,7 +1160,14 @@
         MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Charts,
         MOBIFLIGHT_AS3000_TSC_Vertical_Screen_Inset,
         ROTOR_BRAKE,
-    }
+
+		MASTER_CAUTION_ACKNOWLEDGE,
+		MASTER_WARNING_ACKNOWLEDGE,
+
+		MOBIFLIGHT_AS3000_TSC_Vertical_2_Joystick_DEC,
+		MOBIFLIGHT_AS3000_TSC_Vertical_2_Joystick_INC,
+		MOBIFLIGHT_AS3000_VNAV_TOGGLE,
+	}
 
     public static class EventExtensions
     {
